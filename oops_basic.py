@@ -743,6 +743,88 @@ class b(a):
 obj=b()
 print(b.mro())
 '''
+'''
+class stu:
+    def __init__(self,value):
+        self.value=value
+    def __gt__(s,other):
+        if (s.value > other.value):
+            return True
+        else:
+            return False
+obj=stu(7)
+obj1=stu(4)
+if (obj>obj1):
+    print("obj greater than obj1")
+else:
+    print("obj1 greater than obj2")
+'''
+'''
+class stu:
+    def __init__(self,value):
+        self.value=value
+    def __gt__(s,other):
+        if (s.value > other.value):
+            print("obj greater than obj1")
+        else:
+            print("obj1 greater than obj")
+
+obj=stu(2)
+obj1=stu(4)
+obj>obj1
+'''
+'''
+class stu:
+    def __init__(self,value=45):
+        self.value=value
+    def __ge__(s,other):
+        if (s.value >= other.value):
+            print("obj greater than or equal obj1")
+        else:
+            print("obj1 greater than obj")
+
+obj=stu()
+obj1=stu()
+obj>=obj1
+'''
+'''
+class ashwin:
+    def fun(self,a):
+        print(a)
+    def fun(self,a,b):
+        print(a+b)
+    def fun(self,a,b,c):
+        print(a+b+c)
+   
+a=ashwin()
+a.fun(4,5,6)
+'''
+'''
+class ashwin:
+    def fun(self,a=None):
+        print(a)
+    def fun(self,a,b):
+        print(a+b)
+    def fun(self,a,b,c):
+        print(a+b+c)
+   
+a=ashwin()
+a.fun(4,5,6)'''
+'''
+class a:
+    def fun(self,a=None,b=None,c=None):
+        if (a!=None and b!=None and c!=None):
+            print(a+b+c)
+        elif(a!=None and b!=None):
+            print(a+b)
+        else:
+            print(a)
+obj=a()
+obj.fun(23,65)
+
+obj.fun(23)
+obj.fun(23,65,43)
+'''
 
 
 
