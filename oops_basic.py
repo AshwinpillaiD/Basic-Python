@@ -825,7 +825,100 @@ obj.fun(23,65)
 obj.fun(23)
 obj.fun(23,65,43)
 '''
+# method overloding using multiple dispatch
+from multipledispatch import dispatch
+'''
+@dispatch(int,int)
+def add(a,b):
+    return a+b
 
+@dispatch(int,int,int)
+def add(a,b,c):
+    return a+b+c  
+
+print(add(3,4))
+print(add(10,30,45))
+
+'''
+'''
+@dispatch(float,int)  #" ****** "
+def add(a,b):
+    return a+b
+
+@dispatch(int,float,int)
+def add(a,b,c):
+    return a+b+c 
+
+@dispatch(int,float,str)
+def add(a,b,c):
+    return a+b,c 
+
+#print(add(3,4))       " exception error :-not implemented error"
+print(add(10,30.3,"ashwin"))
+
+'''
+'''
+class a:
+    def detail(self):
+        print("i am from in class a")
+class b(a):
+    def detail(self):
+        print("i am from in class b")
+class c(b):
+    def detail(self):
+        print("i am from in class c")
+
+obj=c()
+obj.detail()
+'''
+'''
+# polymarphism using inhertance
+class a:
+    def detail(self,name="chadura"):
+        print("hai",name)
+
+class b(a):
+    def detail(self):
+        super().detail(name="chadura")
+        print("hello")
+
+obj=b()
+obj.detail()
+
+'''
+# method overriding
+# Using multiple inheritance
+'''
+class a:
+    def detail(self):
+        print("i am from class a")
+
+class b():
+    def detail(self):
+        super().detail()
+        print("i am from class b")
+
+class c():
+    def detail(self,*value):
+        super().detail()
+        print("i am from class c",value)
+
+class d(c,b,a):
+    def detail(self):
+        super().detail()
+        print("i am from class d")
+
+obj=d()
+obj.detail()
+'''
+'''
+
+class c():
+    def detail(self,**value):   # u give the empty keyword arrument the output well be {}
+        print("i am from class c",value)
+obj=c()
+obj.detail()
+'''
 
 
 
