@@ -919,7 +919,43 @@ class c():
 obj=c()
 obj.detail()
 '''
+'''
+class ashwin:
+    def speak(self):
+        return "i am ashwin"
+class shyam:
+    def speak(self):
+        return "i am shyam"
 
+class raj:
+    def speak(self):
+        return "i am raj"
+
+obj1=ashwin()
+obj2=shyam()
+obj3=raj()
+       
+for i in (obj1,obj2,obj3):
+    print(i.speak())
+
+'''
+'''
+class ashwin:
+    def speak(self):
+        return "i am ashwin"
+class shyam:
+    def speak(self):
+        return "i am shyam"
+
+class raj:
+    def speak(self):
+        return "i am raj"
+
+obj1=ashwin(),shyam(),raj()
+       
+for i in (obj1):
+    print(i.speak())
+'''
 
 
         
