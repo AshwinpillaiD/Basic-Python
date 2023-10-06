@@ -1006,7 +1006,30 @@ print("\n")
 obj.scooty1("scooty","yellow",30000)
 
 '''
+# Encapsulation 
+'''
+class test:
+    def detail(self,name,age):
+        self.name=name
+        self.age=age
 
+obj=test()
+obj.detail("ashwin",23)  #*******
+print("name:",obj.name)
+print("name:",obj.age)
+
+
+class test:
+    def detail(self,name,age):
+        self.name=name
+        self.age=age
+obj=test()
+obj.detail("ashwin",23)
+obj.name="appu"          # encapsulation  data not serure well be change (name)
+print("name:",obj.name)
+print("name:",obj.age)
+
+'''
 
 
         
