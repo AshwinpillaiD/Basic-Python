@@ -956,6 +956,57 @@ obj1=ashwin(),shyam(),raj()
 for i in (obj1):
     print(i.speak())
 '''
+'''
+
+class vehicle:
+    def __init__(self,name,color,price):
+        self.name=name
+        self.color=color
+        self.price=price
+
+    def show(self):
+        print("details",self.name,self.color,self.price)
+    def speed(self):
+        print("vehicle max speed is 100")
+    def gear(self):
+        print("scooty -no gear")
+
+class car(vehicle):
+    def speed(self):
+         print("car max speed is 240")
+    def gear(self):
+        print("car max speed is gear")
+
+car=car("kwid","red","4l")
+car.show()
+car.speed()
+car.gear()
+
+print("\n")
+
+vehicle=vehicle("scooty","blue","10l")
+car.show()
+car.speed()
+car.gear()
+
+'''
+'''
+class vehicle():
+    def car1(self,name,color,price,gear="yes",speed=240):
+        print("Name:{} \n color:{}\n price:{}".format(name,color,price))
+        print(f"Gear:{gear}\n speed:{speed}")
+class scooty(vehicle):     
+    def scooty1(self,name,color,price,gear="No",speed=100):
+        print("Name:{} \n color:{}\n price:{}".format(name,color,price))
+        print(f"Gear:{gear}\n speed:{speed}")
+
+obj=scooty()
+obj.car1('kwid','blue',10000)
+print("\n")
+obj.scooty1("scooty","yellow",30000)
+
+'''
+
 
 
         
