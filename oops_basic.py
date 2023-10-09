@@ -1030,7 +1030,122 @@ print("name:",obj.name)
 print("name:",obj.age)
 
 '''
+# Encapsulation using public variable method
+'''class chadura:
+    def detail(self,name,age):
+        self.name=name
+        self.age=age
+        print("Name:",self.name)
+        print("Name:",self.age)
 
+emp1=chadura()
+emp1.detail("ashwin",23)
+print("Name:",emp1.name)
+print("Name:",emp1.age)
+
+'''
+'''
+
+class chadura:
+    def detail(self,name,age):
+        self.name=name
+        self.age=age
+    print("Name:",emp1.name)  # error  NameError=name 'emp1' is not defined
+
+    print("Name:",emp1.age)
+
+emp1=chadura()
+emp1.detail("ashwin",23)
+'''
+
+#  Encapsulation using private variable
+'''
+class chadura:
+    def detail(self,name,age):
+        self.__name=name
+        self.__age=age
+        print("Name:",self.__name)
+        print("age",emp.__age)
+
+emp=chadura()
+emp.detail("ashwin",23)
+
+print("age",emp.age) # attribute error
+
+'''
+'''
+class chadura:
+    def detail(self,name,age):
+        self.__name=name
+        self.__age=age
+        print("Name:",emp.__name)
+        print("age",emp.__age)
+
+emp=chadura()
+emp.detail("shyam",23)
+
+class chadura:
+    def detail(self,name,age):
+        self.__name=name
+        self.__age=age
+    print("Name:",emp.__name)
+    print("age",emp.__age)
+
+emp=chadura()
+emp.detail("ashwin",23)
+
+'''
+# private variable using public variable
+'''
+class chadura:
+    def detail(self,name,age):
+        self.__name=name  # private variable using public variable
+        self.age=age      # public variable
+        print("Name:",emp.__name)
+
+    def show(self):
+        print("Name:",emp.__name)
+        print("age",emp.age) # public variable
+emp=chadura()
+emp.detail("shyam",23)
+emp.show()
+print("age",emp.age)     # public variable
+
+'''
+# private method call using public method 
+'''
+class school:
+    def detail(self):
+        self.name="asggwdfb"
+        print("school name",self.name)
+    def __stu1(self):
+        print("name: ashwin")
+        print("class: 10th")
+        print('\n')
+    def stu2(self):
+        self.__stu1()
+        print("name: ash")
+        print("class: 11th")
+obj=school()
+obj.detail()
+obj.stu2()
+'''
+'''  
+class school:
+    def detail(self):
+        self.name="asggwdfb"
+        print("school name",self.name)
+    def __stu1(self):
+        print("name: ashwin")
+        print("class: 10th")      
+    def __stu2(self):       
+        print("name: ash")
+        print("class: 11th")
+obj=school()
+obj.detail()
+obj._school__stu1()
+obj._school__stu2()
+'''
 
         
 
