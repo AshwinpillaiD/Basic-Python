@@ -1146,6 +1146,71 @@ obj.detail()
 obj._school__stu1()
 obj._school__stu2()
 '''
+"""
+class detail:
+    _name="ashwin"
+    _roll=3645476
+    def display(self):
+        print("Name",self._name)
+        print("Roll no",self._roll)
+    
+obj=detail()
+obj.display()
+"""
+'''
+class base:
+    def __init__(self):
+        self._name="ashwin"
+class derived(base):
+    def __init__(self):
+     #   super().__init__()
+        base.__init__(self)
+        print("calling from the derived class",self._name)
+        self._name="Shyam"
+        print("modified name",self._name)
+
+obj1=derived()
+obj2=base()
+print("Accessing protected member of obj1:",obj1._name)
+print("Accessing protected member of obj2:",obj2._name)
+
+'''
+# setter and getter concept
+'''
+class detail:
+    def setname(self,n):
+        self.__name=n
+    def getname(self):
+        return self.__name
+    def display(self):
+        print("student name :",self.__name)
+
+obj=detail()
+obj.setname("ashwin")
+obj.display()
+'''
+'''
+class detail:
+    def setname(self,n):
+        self.__name=n
+    def getname(self):
+        return self.__name
+
+    def setage(self,age):
+        self.__age=age
+    def getage(self):
+        return self.__age
+
+    def display(self):
+        print("student name :",obj.getname())
+        print("student age :",self.__age)
+
+obj=detail()
+obj.setname("ashwin")
+obj.setage(23)
+obj.display()
+
+'''
 
         
 
