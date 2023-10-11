@@ -1211,9 +1211,32 @@ obj.setage(23)
 obj.display()
 
 '''
+'''
+class chadura:
+    def __init__(self):
+        self._age=0
+    
+    @property
+    def age(self):
+        print("getter method called")
+        return self._age
+    
+    @age.setter
+    def age(self,n):
+        if n<18:
+            print("age is below 18")
+        print("call the setter method")
+        self._age =n
 
+obj=chadura()
+obj.age = 10
+print(obj.age)
+obj.age = 0
+print(obj.age)
+obj.age = 19
+print(obj.age)
         
-
+'''
 
 
 
