@@ -1237,6 +1237,49 @@ obj.age = 19
 print(obj.age)
         
 '''
+'''
+# nested function
+# return function as value
+def outer():
+    msg2="hello"
+    def inner():
+        msg1="ashwin"
+        msg=msg2+msg1
+        return msg
+    return inner
+obj=outer()
+'''
+#pass function as a parameter
+'''
+def function1():
+    print("function1")
+
+def function2(ref):
+    ref()
+    print("function 2")
+function2(function1)
+'''
+'''
+def function1(x,y):
+    return x+y
+def function2(ref,x,y):
+ 
+    return ref(x,y)
+result=function2(function1,5,6)
+print(result)
+
+''''''
+def upperstring(ref):
+    def process():
+        data=ref()
+        return data.upper()
+    return process
+@upperstring
+def myfunction():
+    return "hai ashwin"
+print(myfunction())
+
+'''
 
 
 
