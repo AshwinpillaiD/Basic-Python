@@ -1280,6 +1280,30 @@ def myfunction():
 print(myfunction())
 
 '''
+def addition(ref):
+    def process(x,y):
+        return ref(x,y)
+    return process
+@addition
+def myfunction(a,b):
+    return a+b
+print(myfunction(5,7))
+'''
+'''
+class demo:
+    def __init__(self,name):
+        self.name=name
+
+    def __call__(self,name,age):
+        name_age=name,age
+        return name_age*5
+    
+@demo
+def myfun(name,age):
+    return name,age
+print(myfun("ashwin",23))
+
+    '''
 
 
 
